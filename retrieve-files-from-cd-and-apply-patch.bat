@@ -1,1 +1,1 @@
-%~dp0App\Installer\install.bat
+"%~dp0App\Installer\install.bat"
