@@ -2,7 +2,7 @@
 Portable runner and patcher for SimCity 2000 win95 edition to run on Windows Vista/7/8/10.
 
 ## How to run
-* Extract this repo to where you want SimCity2000.
+* Extract this repo to where you want your local SimCity 2000 game.
 * Grab your SimCity 2000 CD or download the .iso from<br>
 https://archive.org/details/SimCity2000_Special_Edition_Maxis-EA_Eng .
 * Insert/mount SimCity 2000, or alternatively copy your SC2K directory to `Apps/SC2K`.
