@@ -11,7 +11,7 @@ for /f "skip=1 tokens=1,2" %%i in ('wmic logicaldisk get caption^, drivetype') d
 
   if [%%j]==[5] echo Searching drive %%i ...
   if [%%j]==[5] IF EXIST %%i\WIN95\SC2K\SIMCITY.EXE echo *** Found SC2K on %scdrive%\WIN95\SC2K\ 
-  if [%%j]==[5] IF EXIST %%i\WIN95\SC2K\SIMCITY.EXE call :COPY_SC2K "%scdrive%" & call :ALTERNATIVE & goto :EOF
+  if [%%j]==[5] IF EXIST %%i\WIN95\SC2K\SIMCITY.EXE call :COPY_SC2K "%scdrive%" & goto :EOF
 )
 
 echo Did not find a SC2K directory on any drive !!!
