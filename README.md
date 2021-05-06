@@ -11,7 +11,7 @@ Portable setup and runner for SimCity 2000 win95 edition to run on Windows Vista
 
 ### Method 2: 
 - Run SimCity2000Portable.exe 
-- Answer [y] to download and integrate all game files from archive.org
+- Answer [y] to automatically integrate all game files from archive.org
 
 ## Sources
 Thanks to aldude999 for creating the compatibility patch:<br>
