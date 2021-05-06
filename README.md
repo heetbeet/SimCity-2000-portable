@@ -3,12 +3,15 @@
 
 Portable setup and runner for SimCity 2000 win95 edition to run on Windows Vista/7/8/10.
 
-## Run and setup SimCity 2000 
-* Extract this repo to where you want your local SimCity 2000.
-* Grab your SimCity 2000 CD or download the .iso from<br>
-https://archive.org/details/SimCity2000_Special_Edition_Maxis-EA_Eng .
-* Insert/mount SimCity 2000 (or alternatively copy your SC2K directory to `Apps/SC2K`).
-* Run and setup the game through `SimCity2000Portable.exe`.
+## Run SimCity 2000 
+### Method 1: 
+- Insert your old SimCity 2000 CD
+- Run of SimCity2000Portable.exe 
+- On the first instance all game files will be integrated
+
+### Method 2: 
+- Run SimCity2000Portable.exe 
+- On the first instance, answer [y] to download and integrate all game files from archive.org
 
 ## Sources
 Thanks to aldude999 for creating the compatibility patch:<br>
