@@ -6,7 +6,7 @@ Portable setup and runner for SimCity 2000 win95 edition to run on Windows Vista
 ## Run SimCity 2000 
 ### Method 1: 
 - Insert your old SimCity 2000 CD
-- Run of SimCity2000Portable.exe 
+- Run SimCity2000Portable.exe 
 - On the first instance all game files will be integrated
 
 ### Method 2: 
