@@ -61,7 +61,7 @@ goto :EOF
 
     set /p downloadurl=<"%~dp0\simcityurl"
 
-   :: Try downloading git ten times
+   :: Try downloading SimCity ten times
    for /L %%a in (1,1,1,1,1,1,1,1,1,1) do (
        if not exist "%~dp0\simcity.iso" (
            if "%downloadmethod%" equ "webclient" (
