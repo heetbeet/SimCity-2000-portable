@@ -5,7 +5,7 @@ Portable setup and runner for SimCity 2000 win95 edition to run on Windows Vista
 
 ## Run SimCity 2000 
 
-First download and extract the [SimCity 2000 Portable repository](https://github.com/heetbeet/SimCity-2000-portable/archive/refs/heads/master.zip), then
+First download and extract the current [SimCity 2000 Portable repository](https://github.com/heetbeet/SimCity-2000-portable/archive/refs/heads/master.zip), then
 
 ### Method 1: 
 - Run SimCity2000Portable.exe 
