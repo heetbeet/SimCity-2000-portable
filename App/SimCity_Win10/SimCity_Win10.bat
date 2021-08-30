@@ -7,7 +7,7 @@ if not exist "%~dp0..\SC2K\SIMCITY.EXE" (
 )
 
 :: Patch SimCity if not yet patched
-if not exist "%~dp0..\SC2K\SimCity_EntryPoint.exe" (
+if not exist "%~dp0..\SC2K\SimCity_W10_EntryPoint.exe" (
     "%~dp0BPatch.exe" "%~dp0..\SC2K\SIMCITY.EXE" "%~dp0..\SC2K\SimCity_W10_EntryPoint.exe" --input="%~dp0SimCity_Win10.patch"
 )
 
