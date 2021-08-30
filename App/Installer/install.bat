@@ -71,7 +71,7 @@ goto :EOF
            )
        )
        if "!errorlevel!" equ "0" (
-           ren "%~dp0\simcity.iso-temp" "%~dp0\simcity.iso" 2>nul
+           ren "%~dp0simcity.iso-temp" "simcity.iso" 2>nul
        )
        if not exist "%~dp0\simcity.iso" (
            REM wait one seconds
