@@ -56,7 +56,7 @@ goto :EOF
 
 
     set downloadmethod=webclient
-    call powershell -Command "gcm Invoke-WebRequest" >nul 2>&1
+    call powershell  -NoP -Command "gcm Invoke-WebRequest" >nul 2>&1
     if "%errorlevel%" EQU "0" set downloadmethod=webrequest
 
     set /p downloadurl=<"%~dp0\simcityurl"
@@ -65,9 +65,9 @@ goto :EOF
    for /L %%a in (1,1,1,1,1,1,1,1,1,1) do (
        if not exist "%~dp0\simcity.iso" (
            if "%downloadmethod%" equ "webclient" (
-               powershell -Command "(New-Object Net.WebClient).DownloadFile(\"%downloadurl%\", '%~dp0\simcity.iso-temp')"
+               powershell -NoP -Command "(New-Object Net.WebClient).DownloadFile(\"%downloadurl%\", '%~dp0\simcity.iso-temp')"
            ) else (
-               powershell -Command "Invoke-WebRequest \"%downloadurl%\" -OutFile '%~dp0\simcity.iso-temp'"
+               powershell -NoP -Command "Invoke-WebRequest \"%downloadurl%\" -OutFile '%~dp0\simcity.iso-temp'"
            )
        )
        if "!errorlevel!" equ "0" (
@@ -84,8 +84,8 @@ goto :EOF
     robocopy "%~dp0\simcity\WIN95\SC2K" "%~dp0..\SC2K" /MIR /njh /njs /ndl /nc /ns
 
     if exist "%~dp0..\SC2K" (
-        powershell -command "Remove-Item -Recurse -Force '%~dp0\simcity'"
-        powershell -command "Remove-Item -Force '%~dp0\simcity.iso'"
+        powershell  -NoP -command "Remove-Item -Recurse -Force '%~dp0\simcity'"
+        powershell  -NoP -command "Remove-Item -Force '%~dp0\simcity.iso'"
     )
 
 goto :EOF
