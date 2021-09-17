@@ -2,9 +2,7 @@
 set __COMPAT_LAYER=WinXP
 
 :: Copy SimCity files if not yet copied
-if not exist "%~dp0..\SC2K\SIMCITY.EXE" (
-    call cmd /c "call "%~dp0..\Installer\install.bat" "
-)
+if not exist "%~dp0..\SC2K\SIMCITY.EXE" call cmd /c "call "%~dp0..\Installer\install.bat" "
 
 :: Patch SimCity if not yet patched
 if not exist "%~dp0..\SC2K\SimCity_W10_EntryPoint.exe" (
