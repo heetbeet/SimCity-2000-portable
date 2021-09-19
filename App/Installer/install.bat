@@ -45,14 +45,14 @@ goto :EOF
     echo:
 
 
-   set "answer="
-   for %%a in (1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1) do (
+    set "answer="
+    for %%a in (1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1) do (
        if /i "!answer!" neq "Y"  if /i "!answer!" neq "N" (
            set /P answer="Do you want to install SimCity from archive.org [Y/N]? " || set answer=xxxx
        )
-   )
-   echo:
-   if /i "!answer!" equ "n" exit /b -1
+    )
+    echo:
+    if /i "!answer!" equ "n" exit /b -1
 
 
     set downloadmethod=webclient
@@ -61,13 +61,14 @@ goto :EOF
 
     set /p downloadurl=<"%~dp0\simcityurl"
 
-   :: Try downloading SimCity ten times
-   for /L %%a in (1,1,1,1,1,1,1,1,1,1) do (
+    :: Try downloading SimCity ten times
+    for /L %%a in (1,1,1,1,1,1,1,1,1,1) do (
+       echo Downloading 180mb .iso file from archive.org... be patient
        if not exist "%~dp0\simcity.iso" (
            if "%downloadmethod%" equ "webclient" (
-               powershell -NoP -Command "(New-Object Net.WebClient).DownloadFile(\"%downloadurl%\", '%~dp0\simcity.iso-temp')"
+               powershell -NoP -Command "(New-Object Net.WebClient).DownloadFile('%downloadurl%', '%~dp0\simcity.iso-temp')"
            ) else (
-               powershell -NoP -Command "Invoke-WebRequest \"%downloadurl%\" -OutFile '%~dp0\simcity.iso-temp'"
+               powershell -NoP -Command "Invoke-WebRequest '%downloadurl%' -OutFile '%~dp0\simcity.iso-temp'"
            )
        )
        if "!errorlevel!" equ "0" (
@@ -77,7 +78,7 @@ goto :EOF
            REM wait one seconds
            ping 127.0.0.1 -n 2 > nul
        )
-   )
+    )
 
     "%~dp0\7z.exe" x "%~dp0\simcity.iso" -o"%~dp0\simcity"
 
